@@ -12,11 +12,17 @@ public class Exercise001 {
     }
 
     public double addVat(double originalPrice, double vatRate) {
-        return (originalPrice + double vatRate) ;
+        double withVat = originalPrice + (originalPrice * vatRate)/ 100;
+        withVat=Math.round(withVat*100.00)/100.00;
+        return withVat;
     }
 
     public String reverse(String sentence) {
-        return "";
+        String rev = "";
+        int len = sentence.length();
+        for (int i = len -1; i>=0; i--)
+          rev = rev + sentence.charAt(i);
+        return rev;
     }
 
     public int countLinuxUsers(List<User> users) {
