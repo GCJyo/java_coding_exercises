@@ -26,6 +26,7 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-        return 0;
+        int freq = Collections.frequency(users,"Linux");
+        return freq;
     }
 }
