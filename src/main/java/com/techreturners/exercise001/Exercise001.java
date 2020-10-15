@@ -27,6 +27,10 @@ public class Exercise001 {
 
     public int countLinuxUsers(List<User> users) {
         int count = 0;
-         if (users.get(2).equals("Linux")) {count += 1;};
+        for(User user1 : users) {
+            if (user1.getType().equals("Linux")) {
+                count += 1;
+            }
+        }
     return count;}
 }
